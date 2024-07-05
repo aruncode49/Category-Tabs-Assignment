@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+/* headline */
+.headline {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 25px;
+  text-align: center;
+}
+
+/* tab switch layout */
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.tab_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline-start: 0%;
+  margin-inline: auto;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.tab_item {
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+.tab_item > a {
+  display: block;
+  padding: 4px 8px;
+  width: 100px;
+  color: black;
+}
+
+#selected {
+  background-color: black;
+  color: white;
+}
+
+/* products */
+
+.product_container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px;
+  margin-top: 30px;
+}
+
+.product_card {
+  width: 180px;
+  position: relative;
+}
+
+.product_badge_text {
+  position: absolute;
+  background-color: #fff;
+  font-size: 12px;
+  padding: 7px 8px;
+  top: 4px;
+  left: 4px;
+  border-radius: 2px;
+  font-weight: 600;
+}
+
+.product_image {
+  width: 100%;
+  border-radius: 5px;
+  height: 220px;
+  object-fit: cover;
+}
+
+.product_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2px;
+}
+
+.product_title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product_vendor {
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.product_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -10px;
+  padding: 0 4px;
+  font-size: 12px;
+}
+
+.product_price {
+  font-weight: 600;
+}
+
+.product_discount_price {
+  color: #8f8f8f;
+  text-decoration: line-through;
+}
+
+.product_discount {
+  color: red;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: black;
+  color: white;
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Mobile View */
+@media (max-width: 767px) {
+  .product_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 4px;
+    row-gap: 20px;
+    column-gap: 10px;
+  }
+}
